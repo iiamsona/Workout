@@ -19,7 +19,7 @@ next()
 app.use('/api/workouts',workoutRoutes)
 
 //connect to db
-mongoose.connect('mongodb://127.0.0.1:27017/MERNapp')
+mongoose.connect(process.env.MONGO_URI)
 .then(() => {
 //listen for requests
 app.listen(process.env.PORT, () => {
