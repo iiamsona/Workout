@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 // components
-import WorkoutDetails from '../components/WorkoutDetails'
+import WorkoutDetails from "../components/WorkoutDetails"
 
 const Home = () => {
 const [workouts, setWorkouts] = useState(null)
@@ -11,7 +11,7 @@ const [workouts, setWorkouts] = useState(null)
     useEffect(() => {
         const fetchWorkouts = async () => {
             const response = await fetch('/api/workouts')
-            const json = await response.json
+            const json = await response.json()
 
             if (response.ok){
                 setWorkouts(json)
