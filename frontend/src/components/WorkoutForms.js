@@ -15,9 +15,9 @@ const handleSubmit = async (e) => {
         method: 'POST',
         body: JSON.stringify(workout),
         headers: {
-            'Content Type' : 'aplication/json'
+          'Content-Type': 'application/json'
         }
-    })
+      })
     const json = await response.json()
 
     if(!response.ok){
@@ -58,7 +58,7 @@ return(
         />
 
 <button>Add Workout</button>
-
+{error && <div className="error">{error}</div>}
     </form>
 )
 }
